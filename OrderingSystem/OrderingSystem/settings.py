@@ -107,14 +107,15 @@ USE_TZ = True
 # STATIC FILES (VERY IMPORTANT)
 # ======================
 STATIC_URL = '/static/'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # where collectstatic will gather files
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / 'MSMEOrderingWebApp' / 'static',  # include your app's static folder
 ]
 
+# Optional: use WhiteNoise for production
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # ======================
 # MEDIA FILES
