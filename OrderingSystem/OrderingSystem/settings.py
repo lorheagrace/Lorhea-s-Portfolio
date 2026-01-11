@@ -107,10 +107,10 @@ USE_TZ = True
 # STATIC FILES (VERY IMPORTANT)
 # ======================
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # where collectstatic will gather files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Where collectstatic will collect
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'MSMEOrderingWebApp' / 'static',  # include your app's static folder
+    os.path.join(BASE_DIR, 'MSMEOrderingWebApp/static'),
 ]
 
 # Optional: use WhiteNoise for production
@@ -121,7 +121,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # MEDIA FILES
 # ======================
 MEDIA_URL = '/Media/'
-MEDIA_ROOT = BASE_DIR / 'Media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'MSMEOrderingWebApp/static/Media')
 
 # ======================
 # DEFAULT PK
